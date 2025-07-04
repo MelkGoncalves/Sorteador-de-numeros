@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (repeatValue) {
 
             // Se sim, executa um loop para sortear a quantidade de números desejada
-            for (let i = 0 i < quantityValue i++) {
+            for (let i = 0; i < quantityValue; i++) {
                 // Gera um número aleatório entre o valor mínimo e máximo
                 let numero = Math.floor(Math.random() * (rangeMaxValue - rangeMinValue + 1) + rangeMinValue)
                 
@@ -77,15 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Limpa os números anteriores
         result.innerHTML = ''
 
-        // Mostra um por um com intervalo
-        numerosSorteados.forEach((numero, index) => {
-          setTimeout(() => {
-            const span = document.createElement('span')
-            span.classList.add('draw-number')
-            span.textContent = numero
-            result.appendChild(span)
-          }, index * 800) // intervalo entre os números (300ms entre cada)
-        })
+        // Exibe os números sorteados no console com animação!
+        function animateNumber(numero) {
+             return new Promise(resolve => {
+             const span = document.createElement('span')
+             span.classList.add('draw-number')
+             span.textContent = numero
+             result.appendChild(span)
+             setTimeout(resolve, 800) // espera 1000ms antes de seguir para o próximo
+             })
+        }
+
+        mostrarNumerosAnimados(numerosSorteados)
+
+        
 
             // Torna a div de resultado visível (remove a classe hidden, se tiver)
         document.querySelector('.draw-result').classList.remove('hidden')
