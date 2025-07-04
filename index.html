@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Sorteador-de-Numeros</title>
+
+</head>
+<body class="dark-theme min-h-screen md:flex md:items-center md:justify-center">
+    <div class="wrapper flex flex-col  md:max-w-6xl md:gap-22">
+        <div class="logo-container flex mt-11 mb-12  md:h-full  md:w-full md:max-w-6xl">
+            <header class="flex  md:w-full md:max-h-fit ">
+                <div class="nav-icon flex w-fit h-auto" >
+                    <img src="/styles-icons/icons/logo.svg" alt="Logo">
+                    <h1 class="">NUMBERS</h1>
+                </div>
+            </header>
+        </div>
+        <main class="flex-container flex flex-col w-full max-w-md px-8  md:w-full md:max-w-6xl md:px-8">
+            <div class="title-info grid gap-2 w-fit max-w-sm h-[136px] mb-10 md:max-w-2xl md:h-56">
+                <p class="sub-title md:w-fit md:h-6">ONLINE - GRATUITO</p>
+                <div class="number-draw-header">
+                    <h2 class="number-draw-title md:w-fit md:h-fit">SORTEADOR <br> DE NÚMEROS</h2>
+                </div>
+            </div>
+    
+            <div class="draw-container   flex flex-col gap-10 m-auto  md:w-full  ">
+                <div class="draw-description grid gap-0.5 h-full ">
+                    <h2 class="md:w-fit md:h-fit">QUERO SORTEAR:</h2>
+                    <p class="md:w-fit md:max-w-[482px] md:h-fit">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                </div>
+    
+                <div class="settings-wrapper flex flex-col  gap-5 md:flex-row md:w-full md:max-w-lg">
+                    <div class="input-divider flex gap-3 mb-5 md:w-full md:h-full max-h-[88px]">
+                        <fieldset class="quantity-field md:h-full md:max-h-[88px]">
+                            <label class="field-label grid mb-2" for="quantity-input">NÚMEROS</label>
+                            <input type="number" value="" id="quantity-input" class="quantity-input w-full max-w-[79px] h-full max-h-[56px] py-2 rounded-lg text-center" placeholder="2">
+                        </fieldset>
+                        <fieldset class="quantity-field md:h-full md:max-h-[88px]">
+                            <label class="field-label grid mb-2" for="range-min-input">DE</label>
+                            <input  type="number" value="" id="range-min-input" class="range-min-input w-full max-w-[86px] h-full max-h-[56px] py-2 rounded-lg text-center" placeholder="1">
+                        </fieldset>
+                        <fieldset class="quantity-field md:h-full md:max-h-[88px]">
+                            <label class="field-label grid mb-2" for="range-max-input">ATÉ</label>
+                            <input type="number" value="" id="range-max-input" class="range-max-input w-full max-w-[86px] h-full max-h-[56px] py-2 rounded-lg text-center" placeholder="100">
+                        </fieldset>
+                    </div>
+    
+                    <div class="repeat-toggle flex items-center gap-2 md:w-full  ">
+                        
+                        <div class="input-checkbox ">
+                            <input type="checkbox" id="repeat" class="toggle-input" title="repeat">
+                            <label for="repeat" class="switch">
+                                <span class="slider"></span>
+                            </label>   
+                        </div>
+                        <span class="toggle-label">Não repetir número</span>
+                    </div>
+                </div>
+    
+                <div class="button-random flex justify-center items-center gap-2 w-full max-w-sm h-full min-h-[56px]  mb-2 md:w-full md:max-w-[482px]  md:h-14  ">
+                    <button class="text-white" id="random-button">SORTEAR</button>
+                    <img src="./styles-icons/icons/seta.svg" alt="">
+                </div>
+            </div>
+    
+            <div class="draw-result hidden grid gap-10  m-auto  md:w-full">
+                <div class="title-result grid m-auto md:w-full md:h-full">
+                    <h2 class="w-full max-w-sm h-full  md:text-center">RESULTADO DO SORTEIO</h2>
+                    <P class="m-auto w-full max-w-sm md:text-center">1° RESULTADO</P>
+                </div>
+    
+                <div id="result-container" class="result-container grid grid-cols-3 gap-2 m-auto align-center justify-center mt-10 md:grid-cols-5 md:m-auto ">
+                    <span class="draw-number">100</span>
+                    
+    
+                
+                    
+                </div>
+    
+                 <div class="button-random flex justify-center items-center gap-2 w-full max-w-sm h-14 m-auto mb-2 md:w-full md:min-w-[30.125rem] md:h-14 md:justify-center md:items-center">
+                    <button class="text-white" id="replay-button">SORTEAR NOVAMENTE </button>
+                    <img src="./styles-icons/icons/replay.svg" alt="">
+                </div>
+            </div>
+    
+            
+            <div class="info-container flex flex-col h-42 m-auto mt-17.5 md:w-full md:max-w-sm  md:h-full md:max-h-[150px] md:grid md:gap-10">
+                <div class="info-box-1 mb-9 flex md:h-14.25">
+                    <div class="title-icon md:flex md:w-96.5 md:h-5.25">
+                        <img class="info-icon" src="/styles-icons/icons/contact.svg" alt="">
+                        <h3 class="md:h-5.25">Como funciona o sorteador de números?</h3>
+                    </div>
+    
+                    <div class="info-text ">
+                        <p class="w-full max-w-sm ml-7 md:h-9 md:w-89.5">O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                    </div>
+                </div>
+    
+                <div class="info-box-2 flex  md:h-47 ">
+                    <div class="title-icon md:flex md:w-96.5 md:h-5.25">
+                        <img class="info-icon " src="/styles-icons/icons/contact.svg" alt="">
+                        <h3>Posso escolher o intervalo dos números?</h3>
+                    </div>
+    
+                    <div class="info-text ">
+                        <p class="w-full max-w-sm ml-7 md:h-9 md:w-89.5">Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+
+    
+</body>
+</html>

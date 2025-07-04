@@ -1,0 +1,133 @@
+
+.draw-description h2 {
+    color: var(--content-primary);
+    font: var(--ff-label-medium);
+}
+
+.draw-description p {
+    color: var(--content-secondary);
+    font: var(--ff-paragraph-medium);
+}
+
+.field-label {
+    color: #c7c9cc;
+    font: var(--ff-label-small);
+    text-align: center;
+}
+
+.quantity-input{
+    display: flex;
+    background-color:  var(--bg-secondary);
+    appearance: none;
+    color: var(--content-primary);
+    font: var(--ff-small);
+    
+}
+
+.range-min-input {
+    display: flex;
+    background-color:  var(--bg-secondary);
+    appearance: none;
+    color: var(--content-primary);
+    font: var(--ff-small);
+    
+}
+
+.range-max-input {
+    display: flex;
+    background-color:  var(--bg-secondary);
+    appearance: none;
+    
+    color: var(--content-primary);
+    font: var(--ff-small);
+    
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Tamanho do toggle */
+.input-checkbox {
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+/* Esconde o checkbox original */
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Estilo do botão */
+.switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 28px;
+  transition: background-color 0.3s;
+}
+
+/* A bolinha do toggle */
+.slider {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* Quando o toggle está ativado */
+.toggle-input:checked + .switch {
+  background: var(--gradient-bg);
+}
+
+.toggle-input:checked + .switch .slider {
+  transform: translateX(14px);
+}
+
+
+.toggle-input:checked + .switch .slider {
+  transform: translateX(11px);
+}
+
+.toggle-label {
+    color: var(--content-primary);
+    font: var(--ff-paragraph-small);
+}
+
+.button-random {
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    font: var(--ff-label-medium);
+}
+
+
+/* Estilo da pagina que irá aparecer após o sorteio */
+
+.title-result h2{
+    color: var(--content-primary);
+    font: var(--ff-label-medium);
+}
+
+.title-result p{
+    color: var(--content-secondary);
+    font: var(--ff-paragraph-medium);
+}
+
+

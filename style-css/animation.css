@@ -1,0 +1,48 @@
+@keyframes girarRoxo {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    background-color: transparent;
+    opacity: 0;
+  }
+  50% {
+    background-color: #6D28D9; /* Roxo (Tailwind: purple-700) */
+    transform: rotate(360deg) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+
+.draw-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.75rem;
+  height: 6.25rem;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--content-brand);
+  background-color: #6D28D9; /* Caso queira manter o roxo após a animação */
+  animation: girarRoxo 0.8s ease forwards;
+  margin: 0.25rem;
+}
+
+.draw-number-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    background: transparent;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    color: var(--content-brand);
+    font-weight: bold;
+    z-index: 9999;
+    transition: background-color 0.3s ease, transform 0.5s ease;
+    
+}
