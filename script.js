@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
         rangeMin.value = ''
         rangeMax.value = ''
         repeat.checked = false
+
+        toggleLabel.textContent = 'Não Repetir número'
     })
 
 })       
