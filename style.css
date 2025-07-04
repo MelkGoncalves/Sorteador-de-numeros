@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-@import url(/style-css/title-info.css);
-@import url(/style-css/counter.css);
-@import url(/style-css/desktop.css);
-@import url(/style-css/animation.css);
+@import url(style-css/title-info.css);
+@import url(style-css/counter.css);
+@import url(style-css/desktop.css);
+@import url(style-css/animation.css);
 
 html {
     margin: 0;
