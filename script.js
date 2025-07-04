@@ -130,7 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
         //  Limpa os números do resultado
         result.innerHTML = ''
 
-        console.log("Clique capturado com sucesso")
+        quantity.value = ''
+        rangeMin.value = ''
+        rangeMax.value = ''
+        repeat.checked = false
     })
 
 })       
